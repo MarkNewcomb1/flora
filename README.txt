@@ -42,9 +42,10 @@ A privileged user will then have access to the database through a password-prote
 | Date/Time          | datetime   |
 | Location           |  text      |
 | Notes              | textarea   |
+| Submit             | submit     |
 +--------------------+------------+
    
- MAINTAINERS
+   MAINTAINERS
 -----------
 Current maintainers:
  * Mark Newcomb - https://github.com/MarkNewcomb1
