@@ -1,11 +1,15 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Flora Form</title>
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 	</head>
 	<style>
-/*######## Smart Green ########*/
 html{
 	height:100%;
 	background-image:url("leaf-on-wood.jpg");
@@ -102,6 +106,9 @@ html{
 .flora .button:hover {
     background-color:#80A24A;
 }
+.flora #reset {
+	margin-top:20px;
+}
 	</style>
 	<body>
 <?php
@@ -145,7 +152,8 @@ if ( ! empty( $_POST ) ) {
  <input name="person-name" type="text">
  <label for="notes"><span>Additional Notes (Add any additional notes and observations.)</span></label>
  <input name="notes" type="text">
-  <input type="submit" value="Submit Form" class="button">
+  <input type="submit" value="Submit Form" class="button"><br>
+  <input type="reset" value="Reset form" id="reset">
 </form>
 	</body>
 </html>
