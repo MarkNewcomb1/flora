@@ -1,3 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Flora Form</title>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	</head>
+	<style>
+/*######## Smart Green ########*/
+html{
+	height:100%;
+	background-image:url("leaf-on-wood.jpg");
+	background-size:cover;
+}
+.flora {
+    margin-left:auto;
+    margin-right:auto;
+
+    max-width: 500px;
+    background: #F8F8F8;
+    padding: 30px 30px 20px 30px;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #666;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.flora h1 {
+    font: 3.2em "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 20px 0px 20px 30px;
+    display: block;
+    margin: -30px -30px 10px -30px;
+    color: #FFF;
+/*     background: #9DC45F; */
+	background-image: url("http://cdn.morguefile.com/imageData/public/files/l/Ladyheart/08/l/1439740866eaqe9.jpg");
+	background-position: 0px -170px;
+    text-shadow: 1px 1px 1px #949494;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    border-bottom:1px solid #89AF4C;
+
+}
+.flora h1>span {
+    display: block;
+    font-size: 11px;
+    color: #FFF;
+}
+
+.flora label {
+    display: block;
+    margin: 0px 0px 5px;
+    font-weight:600;
+}
+.flora label>span {
+	font-family: 'Montserrat', sans-serif;
+	font-size:1.1em;
+    float: left;
+    margin-top: 10px;
+    color: #5E5E5E;
+}
+.flora input[type="text"], .flora input[type="email"], .flora textarea, .flora select {
+    color: #555;
+    height: 30px;
+    line-height:15px;
+    width: 100%;
+    padding: 0px 0px 0px 10px;
+    margin-top: 2px;
+    margin-bottom:20px;
+    border: 1px solid #E5E5E5;
+    background: #FBFBFB;
+    outline: 0;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    font: normal 14px/14px Arial, Helvetica, sans-serif;
+}
+.flora textarea{
+    height:100px;
+    padding-top: 10px;
+}
+.flora select {
+    background: url('down-arrow.png') no-repeat right, -moz-linear-gradient(top, #FBFBFB 0%, #E9E9E9 100%);
+    background: url('down-arrow.png') no-repeat right, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FBFBFB), color-stop(100%,#E9E9E9));
+   appearance:none;
+    -webkit-appearance:none; 
+   -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width:100%;
+    height:30px;
+}
+.flora .button {
+    background-color: #9DC45F;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-border-radius: 5px;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    font-size:1.3em;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #949494;
+}
+.flora .button:hover {
+    background-color:#80A24A;
+}
+	</style>
+	<body>
 <?php
 // Only process the form if $_POST isn't empty
 if ( ! empty( $_POST ) ) {
@@ -25,18 +131,21 @@ if ( ! empty( $_POST ) ) {
   $mysqli->close();
 }
 ?>
-<form method="post" action="thankyou.php">
-<label for="plant-name">Plant Name (Enter the name of the Plant, if known. Otherwise enter a brief description of the Plant.)</label><br>
-  <input name="plant-name" type="text"><br>
- <label for="soil-conditions">Soil Conditions (Enter any combination of Clay, Loam, Peat, Rocky, Sand, or Silt descriptors as well as Soil Color.)</label><br>
+<form method="post" action="thankyou.php" class="flora">
+	<h1>Flora Finder<span>Please fill all the text in the fields.</span></h1>
+<label for="plant-name"><span>Plant Name (Enter the name of the Plant, if known. Otherwise enter a brief description of the Plant.)</span></label>
+  <input name="plant-name" type="text">
+ <label for="soil-conditions"><span>Soil Conditions (Enter any combination of Clay, Loam, Peat, Rocky, Sand, or Silt descriptors as well as Soil Color.)</span></label>
  <input name="soil-conditions" type="text">
- <label for="weather-conditions">Weather Conditions (Enter the weather conditions while observing the Plant. Enter any combination of Sunny, Partly Sunny, Cloudy, Raining, Snowing, Fog, Misting, Windy, etc. Also enter an estimate of the Temperature.)</label><br>
+ <label for="weather-conditions"><span>Weather Conditions (Enter the weather conditions while observing the Plant. Enter any combination of Sunny, Partly Sunny, Cloudy, Raining, Snowing, Fog, Misting, Windy, etc. Also enter an estimate of the Temperature.)</span></label>
  <input name="weather-conditions" type="text">
- <label for="location">Location (Enter the location where the Plant was seen.)</label><br>
- <input name="location" type="text"><br>
- <label for="person-name">Enter your name:</label><br>
+ <label for="location"><span>Location (Enter the location where the Plant was seen.)</span></label>
+ <input name="location" type="text">
+ <label for="person-name"><span>Enter your name:</span></label>
  <input name="person-name" type="text">
- <label for="notes">Additional Notes (Add any additional notes and observations.)</label><br>
+ <label for="notes"><span>Additional Notes (Add any additional notes and observations.)</span></label>
  <input name="notes" type="text">
-  <input type="submit" value="Submit Form">
+  <input type="submit" value="Submit Form" class="button">
 </form>
+	</body>
+</html>
