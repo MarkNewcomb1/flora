@@ -24,26 +24,30 @@ A privileged user will then have access to the database through a password-prote
 -------------
 | Field              | Data Type    |
 |--------------------|--------------|
-| Observer Name      | VARCHAR(50)  |
-| Unique Identifier  | INT          |
-| Plant Name         | VARCHAR(100) |
-| Soil Conditions    | VARCHAR(100) |
-| Weather Conditions | VARCHAR(50)  |
+| Observation ID     | INT(11)      |
+| Observer Name      | NVARCHAR(50) |
+| Plant Name         | NVARCHAR(100)|
+| Soil Conditions    | NVARCHAR(100)|
+| Weather Conditions | NVARCHAR(50) |
 | Date/Time          | TIMESTAMP    |
-| Location           | VARCHAR(50)  |
-| Notes              | VARCHAR(255) |
+| Location           | NVARCHAR(200)|
+| Latitude           | DECIMAL(9,6) |
+| Longitude          | DECIMAL(9,6) |
+| Notes              | NVARCHAR(255)|
 <a name="a3"/>
 # FORM OUTLINE
 -------------
 |Field               | Form Field |
 |--------------------|------------|
-| Person's Name      | text       |
 | Unique Identifier  | hidden     |
+| Person's Name      | text       |
 | Plant Name         | text       |
 | Soil Conditions    | text       |
 | Weather Conditions | text       |
 | Date/Time          | timestamp  |
 | Location           |  text      |
+| Latitude           |  hidden    |
+| Longitude          |  hidden    |
 | Notes              | textarea   |
 | Submit             | submit     |
 
