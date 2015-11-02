@@ -156,7 +156,7 @@ if ( ! empty( $_POST ) ) {
 <!--  HAVE a date/time field, should be generated. give user ability to override date/time in case there's no connectivity with the phone. -->
 <label for="datetime"><span>Date/Time</span></label>
 <input name="datetime" type="text">
-<!--  geolocation; have to get user permission to allow for that, but if you CAN get the geolocation that's great, but also make it possible for someone to input the latitude and longitude if they wish (try to validate it); if they don't know THAT, then just a text box for location (make at least one required if the other two fail) -->
+<!--  geolocation; have to get user permission to allow for that, but if you CAN get the geolocation that's great, but also make it possible for someone to input the latitude and longitude if they wish (try to validate it); if they don't know THAT, then just a text box for location (make at least one required if the other two fail) but don't have two records for geolocation, just one that gets data inputted into it-->
  <label for="location"><span>Location (Enter the location where the Plant was seen.)</span></label>
  <input name="location" type="text">
  <label for="notes"><span>Additional Notes (Add any additional notes and observations.)</span></label>
