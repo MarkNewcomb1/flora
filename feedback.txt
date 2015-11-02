@@ -1,0 +1,33 @@
+You don't need anything too complex for this.  Really, the big things are escaping dangerous characters, like quotes & semi colons and preventing any stack overflows or crashes with size.  The best thing to do is only allow what you are expecting & limit your input to a reasonable size.  I use 256 characters for most input fields.  Text areas, you might want to bump it up.  A simple regular expression like, ^[a-zA-Z0-9\s~!@#$%&*()_+-=\':",.?]{1,256}$ will match on letters, numbers & the contained special characters.  PHP has a couple of escaping functions, one is htmlspecialchars() that escape unwanted characters.
+In whatever script you have processing the input, set up an empty array for errors.  in your processing function, run it through the regular expression, then through htmlspecialchars function.  if it doesn't pass the reg ex, push the error message into your empty array.  redisplay the page with the errors from your array.
+I always do something like:
+if( count( $errors) > 0 ){}
+foreach( $errors as $err ){echo $err}
+at the top of the form
+If it does pass your validation script, send your sanitized data ( after the regular expression and htmlspecialchars ) to a separate submit function to actually submit it
+Usually, you create another array to hold the sanitized values from $_POST to pass to your submit function.
+function runPost(){
+foreach( $_POST as $post ){
+if ( !^[a-zA-Z0-9\s~!@#$%&*()_+-=\':",.?]{1,256}$ ){}
+array_push( $errors, "this is bad" );
+htmlspecialchars( $post, ENT_QUOTES );
+array_push( $newPostArray, $post );
+}// end for each
+submitPost( $newPostArray );
+http://php.net/manual/en/function.htmlspecialchars.php
+http://php.net/manual/en/function.htmlentities.php
+http://php.net/manual/en/function.strip-tags.php
+
+
+you should probably have both your validatePost() and submitPost() functions on the same page, I just keep them separate because it’s easier to redirect to another function, say displayForm() when there are errors.  Typically, things are pretty complex, you don’t have just an index.html page showing your form, there is an MVC program dictating what is shown, a lot of classes keeping that functionality contained and reusable.  Each action should be self contained in a class or function.  When that action is complete, it passes it off to the next class to complete it processing.  This makes it easier to trigger whatever action needed next easier.  If 1 comes out of A go to B, If 2 comes out of A go to C… Yours isn’t that complex at this point.  You guys are just doing functional programming.  So, I would have ( if you have static html outputting the form ) two functions on validate.php: 1) validatePost() and 2) submitPost(), the later would accept the data from validaatePost and actually submit it to the database and handle any redirects needed on confirmation.  All the validation would be in validatePost().
+
+You could build a pretty complex form validation program.  I would start small, you’re going to want to be very comfortable with classes & OOP before you get into a super complex system.  Something like this would be a good place to start though.  Once you start adding multiple views, like individual records, multiple records, downloadable content, you are going to need something.  Really, if you had a function that initialized your form, you would have a simple MVC logic already.  If you had a program that checked if the $_POST status before displaying the form, you’d have a simple MVC.  If !$_POST, display form.  If $_POST with errors display form, print errors.  If $_POST with no errors, validatePost()…
+
+One thing that really helped me was studying PHP design patterns, specifically the factory design pattern
+
+this site is pretty good http://www.phptherightway.com/pages/Design-Patterns.html
+
+this book is pretty good
+
+http://shop.oreilly.com/product/0636920028062.do
+
