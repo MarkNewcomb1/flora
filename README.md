@@ -26,23 +26,23 @@ A privileged user will then have access to the database through a password-prote
 |--------------------|--------------|
 | Observer Name      | VARCHAR(50)  |
 | Unique Identifier  | INT          |
-| Name of Plant      | VARCHAR(100) |
-| Soil Conditions    | ARRAY        |
+| Plant Name         | VARCHAR(100) |
+| Soil Conditions    | VARCHAR(100) |
 | Weather Conditions | VARCHAR(50)  |
 | Date/Time          | TIMESTAMP    |
 | Location           | VARCHAR(50)  |
-| Notes              | VARCHAR(200) |
+| Notes              | VARCHAR(255) |
 <a name="a3"/>
 # FORM OUTLINE
 -------------
 |Field               | Form Field |
 |--------------------|------------|
-| Observer Name      | text       |
+| Person's Name      | text       |
 | Unique Identifier  | hidden     |
-| Name of Plant      | text       |
-| Soil Conditions    | select     |
+| Plant Name         | text       |
+| Soil Conditions    | text       |
 | Weather Conditions | text       |
-| Date/Time          | datetime   |
+| Date/Time          | timestamp  |
 | Location           |  text      |
 | Notes              | textarea   |
 | Submit             | submit     |
@@ -62,38 +62,36 @@ be growing outside.  They may be perennials or annuals.
 Each data field to have an explanation of what data is to be entered in that field, either on the web page and/or in a
 hover text box.
 
-1.  Plant Name  *[Enter the name of the Plant, if known.  Otherwise enter a brief description of the Plant.]*
+1.  Enter your name:  *[Enter the name of the Plant, if known.  Otherwise enter a brief description of the Plant.]*
     - Text Box
-    - Datatype is TBD
-    - Optional Feature - Attach a picture of the Plant.
+    - Datatype is VARCHAR(50)
+    
+2. Plant Name: *[Enter the name of the Plant, if known. Otherwise enter a brief description of the Plant.]*
+    - Text Box
+    - Datatype is VARCHAR(100)
 
-2.  Soil Conditions  *[Enter any combination of Clay, Loam, Peat, Rocky, Sand, or Silt descriptors as well
+3.  Soil Conditions  *[Enter any combination of Clay, Loam, Peat, Rocky, Sand, or Silt descriptors as well
     as Soil Color.]*
     - Text Box
-    - Datatype is TBD
+    - Datatype is VARCHAR(100)
 
-3.  Weather Conditions  *[Enter the weather conditions while observing the Plant.  Enter any combination
+4.  Weather Conditions  *[Enter the weather conditions while observing the Plant.  Enter any combination
     of Sunny, Partly Sunny, Cloudy, Raining, Snowing, Fog, Misting, Windy, etc.  Also enter an estimate of
     the Temperature.]*
     - Text Box
     - Datatype is TBD
 
-4.  Location  *[Enter the location where the Plant was seen.]*
-    - Text Box
-    - Datatype is TBD
-    - Optional Feature - Gather the Latitude and Longitude from the GPS sensor on the recording device.
-
-5.  Name of the person entering the record.  *[Enter your First and Last Name.]*
+5.  Date/Time 
     - Text Box
     - Datatype is TBD
 
-6.  Additional Notes     *[Add any additional notes and observations.]*
+6.  Location  *[Enter the location where the Plant was seen. If you have connectivity and you allow us to determine your location, we will enter in this field for you.]*
     - Text Box
     - Datatype is TBD
 
-7.  Date and Time the record was submitted.  Not seen by user while entering data.
-    - From the server time stamp.
-    - Datatype is TBD
+7.  Additional Notes     *[Add any additional notes and observations.]*
+    - Text Box
+    - Datatype is VARCHAR(255)
 
 ### BUTTONS
 
