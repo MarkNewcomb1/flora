@@ -42,10 +42,10 @@ CREATE TABLE `observations` (
 
 # Dump of table AuthorizedUsers
 # ------------------------------------------------------------
-DROP TABLE IF EXISTS `AuthorizedUsers`;
+DROP TABLE IF EXISTS `authorizedusers`;
 
-CREATE TABLE `AuthorizedUsers` (
-  `AuthorizedUserID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+CREATE TABLE `authorizedusers` (
+  `AuthorizedUserID` INT(11) unsigned NOT NULL AUTO_INCREMENT,
   `Username` NVARCHAR(60) NOT NULL DEFAULT '',
   `Password` NVARCHAR(128) NOT NULL DEFAULT '',
   PRIMARY KEY (`AuthorizedUserID`)
