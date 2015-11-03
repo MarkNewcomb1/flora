@@ -11,11 +11,7 @@
 		<![endif]-->
 	</head>
 	<body>
-<?php
-include('../models/insertdata.php');
-?>
-<!-- Current database model is fine, nothing too complicated -->
-<form method="post" action="thankyou.php" class="flora">
+<form method="post" action="../models/model.php" class="flora">
 	<h1>Flora Finder<span>Please fill all the text in the fields.</span></h1>
 	 <label for="person-name"><span>Enter your name:</span></label>
  <input name="person-name" type="text">
