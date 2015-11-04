@@ -27,7 +27,7 @@ DROP TABLE IF EXISTS `observations`;
 
 CREATE TABLE `observations` (
   `ObservationID` INT(11) unsigned NOT NULL AUTO_INCREMENT,
-  `ObserverName` NVARCHAR(50) NULL DEFAULT '',
+  `ObserverName` NVARCHAR(50) DEFAULT NULL,
   `PlantName` NVARCHAR(100) NULL,
   `SoilConditions` NVARCHAR(100) DEFAULT NULL,
   `WeatherConditions` NVARCHAR(50) DEFAULT NULL,
@@ -46,8 +46,8 @@ DROP TABLE IF EXISTS `authorizedusers`;
 
 CREATE TABLE `authorizedusers` (
   `AuthorizedUserID` INT(11) unsigned NOT NULL AUTO_INCREMENT,
-  `Username` NVARCHAR(60) NOT NULL DEFAULT '',
-  `Password` NVARCHAR(128) NOT NULL DEFAULT '',
+  `Username` NVARCHAR(60) NOT NULL,
+  `Password` NVARCHAR(128) NOT NULL,
   PRIMARY KEY (`AuthorizedUserID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
