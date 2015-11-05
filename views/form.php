@@ -11,7 +11,8 @@
 		<![endif]-->
 	</head>
 	<body>
-<form method="post" action="../models/model.php" class="flora">
+<form method="post" action="../controllers/controller.php" class="flora">
+	<input type="hidden" name="action" value="save">
 	<h1>Flora Finder<span>Please fill all the text in the fields.</span></h1>
 	 <label for="person-name"><span>Enter your name:</span></label>
  <input name="person-name" type="text">
