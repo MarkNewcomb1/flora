@@ -54,7 +54,7 @@ html{
     color: #555;
     height: 30px;
     line-height:15px;
-    width: 100%;
+    width: 95%;
     padding: 0px 0px 0px 10px;
     margin-top: 2px;
     margin-bottom:20px;
@@ -96,4 +96,8 @@ html{
 }
 .flora #reset {
 	margin-top:20px;
+}
+
+fieldset {
+	margin-bottom: 5%;
 }

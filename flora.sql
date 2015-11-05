@@ -33,8 +33,8 @@ CREATE TABLE `observations` (
   `weatherconditions` NVARCHAR(50) DEFAULT NULL,
   `datetime` DATETIME DEFAULT NULL,
   `location` NVARCHAR(200) DEFAULT NULL,
-  `Latitude` DECIMAL(9,6) DEFAULT NULL,
-  `Longitude` DECIMAL(9,6) DEFAULT NULL,
+  `latitude` DECIMAL(9,6) DEFAULT NULL,
+  `longitude` DECIMAL(9,6) DEFAULT NULL,
   `notes` NVARCHAR(255) DEFAULT NULL,
   PRIMARY KEY (`ObservationID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

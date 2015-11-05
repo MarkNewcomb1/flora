@@ -11,6 +11,8 @@
 			$this->datetime = $data['datetime'];
 			$this->location = $data['location'];
 			$this->notes = $data['notes'];
+			$this->latitude = $data['latitude'];
+			$this->longitude = $data['longitude'];
 		}
 		
 		public function validatePost() {
@@ -22,6 +24,8 @@
 			$dateTime = htmlspecialchars($_POST['datetime']);
 			$location = htmlspecialchars($_POST['location']);
 			$notes = htmlspecialchars($_POST['notes']);
+			$latitude = htmlspecialchars($_POST['latitude']);
+			$longitude = htmlspecialchars($_POST['longitude']);
 			
 			$error = 0;
 			
@@ -55,7 +59,7 @@ if ( ! empty( $_POST ) ) {
   }
   
   // Insert our data
-  $sql = "INSERT INTO observations ( personname, plantname, soilconditions, weatherconditions, datetime, location, notes ) VALUES ( '{$mysqli->real_escape_string($_POST['personname'])}', '{$mysqli->real_escape_string($_POST['plantname'])}', '{$mysqli->real_escape_string($_POST['soilconditions'])}', '{$mysqli->real_escape_string($_POST['weatherconditions'])}', '{$mysqli->real_escape_string($_POST['datetime'])}', '{$mysqli->real_escape_string($_POST['location'])}', '{$mysqli->real_escape_string($_POST['notes'])}' )";
+  $sql = "INSERT INTO observations ( personname, plantname, soilconditions, weatherconditions, datetime, location, notes, latitude, longitude ) VALUES ( '{$mysqli->real_escape_string($_POST['personname'])}', '{$mysqli->real_escape_string($_POST['plantname'])}', '{$mysqli->real_escape_string($_POST['soilconditions'])}', '{$mysqli->real_escape_string($_POST['weatherconditions'])}', '{$mysqli->real_escape_string($_POST['datetime'])}', '{$mysqli->real_escape_string($_POST['location'])}', '{$mysqli->real_escape_string($_POST['notes'])}', '{$mysqli->real_escape_string($_POST['latitude'])}', '{$mysqli->real_escape_string($_POST['longitude'])}' )";
   $insert = $mysqli->query($sql);
   
   // Print response from MySQL
