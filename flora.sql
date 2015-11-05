@@ -27,15 +27,15 @@ DROP TABLE IF EXISTS `observations`;
 
 CREATE TABLE `observations` (
   `ObservationID` INT(11) unsigned NOT NULL AUTO_INCREMENT,
-  `ObserverName` NVARCHAR(50) DEFAULT NULL,
-  `PlantName` NVARCHAR(100) NULL,
-  `SoilConditions` NVARCHAR(100) DEFAULT NULL,
-  `WeatherConditions` NVARCHAR(50) DEFAULT NULL,
-  `DateTime` DATETIME DEFAULT NULL,
-  `ObsLocation` NVARCHAR(200) DEFAULT NULL,
+  `personname` NVARCHAR(50) DEFAULT NULL,
+  `plantname` NVARCHAR(100) NULL,
+  `soilconditions` NVARCHAR(100) DEFAULT NULL,
+  `weatherconditions` NVARCHAR(50) DEFAULT NULL,
+  `datetime` DATETIME DEFAULT NULL,
+  `location` NVARCHAR(200) DEFAULT NULL,
   `Latitude` DECIMAL(9,6) DEFAULT NULL,
   `Longitude` DECIMAL(9,6) DEFAULT NULL,
-  `Notes` NVARCHAR(255) DEFAULT NULL,
+  `notes` NVARCHAR(255) DEFAULT NULL,
   PRIMARY KEY (`ObservationID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

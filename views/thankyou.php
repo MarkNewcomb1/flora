@@ -7,13 +7,15 @@
 		<p>Here is your entry:</p>
 		
 		<?php
-			
+			echo "We have entered the thank you page at last";
+/*
 			echo 'Plant Name: ' . $_POST['plant-name'] . '<br>';
 			echo 'Soil Conditions: ' . $_POST['soil-conditions'] . '<br>';
 			echo 'Weather Conditions: ' . $_POST['weather-conditions'] . '<br>';
 			echo 'Location: ' . $_POST['location'] . '<br>';
 			echo 'Your Name: ' . $_POST['person-name'] . '<br>';
 			echo 'Notes: ' . $_POST['notes'] . '<br>';
+*/
 		?>
 	</body>
 </html>

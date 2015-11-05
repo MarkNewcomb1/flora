@@ -10,10 +10,15 @@ include('../models/model.php');
      $processForm = new ValidateInput($_POST);
      
      if ($processForm->validatePost()) {
-       // save to database
+       $insert = submitPost();
      } else {
        // return back to form with error text
-     }          
+     }        
+     if ($insert){
+	     include("../views/thankyou.php");
+     }else {
+	     echo "failure.";
+     }  
          break;
      
      default:
