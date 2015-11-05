@@ -26,7 +26,7 @@
 			$error = 0;
 			
 			
-			if (! preg_match('/^-?\d*\.?\d+$/' ,$_POST['latitude']) || (! preg_match('/^-?\d*\.?\d+$/' ,$_POST['longitude']))){
+			if (! preg_match('^-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,6}' ,$_POST['latitude']) || (! preg_match('^-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,6}' ,$_POST['longitude']))){
 				print 'Your latitude and longitude must be a number in the valid format';
 				$error++;
 			}
