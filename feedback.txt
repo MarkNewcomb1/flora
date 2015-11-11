@@ -31,3 +31,13 @@ this book is pretty good
 
 http://shop.oreilly.com/product/0636920028062.do
 
+
+Feedback from Nathan:
+
+1. your model isn’t really a model. it is a validator.
+2. your mixing OO with your validator and then call out to submitPost this really should be encapsulated into the class.
+3. All your sql connection code inside submit post could be refactored to a DB or connect Object
+
+nw [7:52 PM]
+4. This lack of separation bleeds and exposes too much implementation detail in your controller.
+
