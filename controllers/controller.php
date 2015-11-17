@@ -7,7 +7,7 @@ include('../models/model.php');
  switch ($action) {
      case 'save':
      echo "now we save...";
-     $processForm = new ValidateInput($_POST);
+     $processForm = new FormFactory($_POST);
      
      if ($processForm->validatePost()) {
        $insert = submitPost();

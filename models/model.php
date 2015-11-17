@@ -1,6 +1,6 @@
 <?php
 //Evan's code
-	class ValidateInput {
+	class FormFactory {
 		
 		public function _construct ($data) {
 			//build the form with input data
@@ -26,16 +26,9 @@
 			$notes = htmlspecialchars($_POST['notes']);
 			$latitude = htmlspecialchars($_POST['latitude']);
 			$longitude = htmlspecialchars($_POST['longitude']);
+			$temperature = htmlspecialchars($_POST['temperature']);
 			
 			$error = 0;
-			
-			
-/*
-			if (! preg_match('^-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,6}' ,$_POST['latitude']) || (! preg_match('^-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,6}' ,$_POST['longitude']))){
-				print 'Your latitude and longitude must be a number in the valid format';
-				$error++;
-			}
-*/
 			
 			if ($error > 0) {
 				return false;
@@ -59,7 +52,7 @@ if ( ! empty( $_POST ) ) {
   }
   
   // Insert our data
-  $sql = "INSERT INTO observations ( personname, plantname, soilconditions, weatherconditions, datetime, location, notes, latitude, longitude ) VALUES ( '{$mysqli->real_escape_string($_POST['personname'])}', '{$mysqli->real_escape_string($_POST['plantname'])}', '{$mysqli->real_escape_string($_POST['soilconditions'])}', '{$mysqli->real_escape_string($_POST['weatherconditions'])}', '{$mysqli->real_escape_string($_POST['datetime'])}', '{$mysqli->real_escape_string($_POST['location'])}', '{$mysqli->real_escape_string($_POST['notes'])}', '{$mysqli->real_escape_string($_POST['latitude'])}', '{$mysqli->real_escape_string($_POST['longitude'])}' )";
+  $sql = "INSERT INTO observations ( personname, plantname, soilconditions, weatherconditions, datetime, location, notes, latitude, longitude, temperature ) VALUES ( '{$mysqli->real_escape_string($_POST['personname'])}', '{$mysqli->real_escape_string($_POST['plantname'])}', '{$mysqli->real_escape_string($_POST['soilconditions'])}', '{$mysqli->real_escape_string($_POST['weatherconditions'])}', '{$mysqli->real_escape_string($_POST['datetime'])}', '{$mysqli->real_escape_string($_POST['location'])}', '{$mysqli->real_escape_string($_POST['notes'])}', '{$mysqli->real_escape_string($_POST['latitude'])}', '{$mysqli->real_escape_string($_POST['longitude'])}', '{$mysqli->real_escape_string($_POST['temperature'])}' )";
   $insert = $mysqli->query($sql);
   
   // Print response from MySQL

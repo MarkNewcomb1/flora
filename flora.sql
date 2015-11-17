@@ -36,6 +36,7 @@ CREATE TABLE `observations` (
   `latitude` DECIMAL(9,6) DEFAULT NULL,
   `longitude` DECIMAL(9,6) DEFAULT NULL,
   `notes` NVARCHAR(255) DEFAULT NULL,
+  `temperature` DECIMAL(5,2) DEFAULT NULL,
   PRIMARY KEY (`ObservationID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
