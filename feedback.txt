@@ -41,3 +41,4 @@ Feedback from Nathan:
 nw [7:52 PM]
 4. This lack of separation bleeds and exposes too much implementation detail in your controller.
 
+http://www.the-art-of-web.com/html/html5-form-validation/
