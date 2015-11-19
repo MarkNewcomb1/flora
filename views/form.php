@@ -27,10 +27,10 @@
  <label for="weatherconditions"><span>Weather Conditions (Enter the weather conditions while observing the Plant. Enter any combination of Sunny, Partly Sunny, Cloudy, Raining, Snowing, Fog, Misting, Windy, etc. Also enter an estimate of the Temperature.)</span></label>
  <input name="weatherconditions" type="text" maxlength="50"> 
 <!--  HAVE a date/time field, should be generated. give user ability to override date/time in case there's no connectivity with the phone. -->
-<label for="datetime"><span>Date/Time - Required</span></label>
-<input name="datetime" type="text" required>
+<label for="datetime"><span>Today's Date (mm/dd/yyyy) - Required</span></label>
+<input name="datetime" type="text" pattern="\d{1,2}/\d{1,2}/\d{4}" required>
 <!--  geolocation; have to get user permission to allow for that, but if you CAN get the geolocation that's great, but also make it possible for someone to input the latitude and longitude if they wish (try to validate it); if they don't know THAT, then just a text box for location (make at least one required if the other two fail) but don't have two records for geolocation, just one that gets data inputted into it-->
- <label for="location"><span>Location (Enter the location where the Plant was seen. If you have connectivity and you allow us to determine your location, we will enter in this field for you.)</span></label>
+ <label for="location"><span>Location (Enter the location where the Plant was seen. If you have connectivity and you allow us to determine your location, we will enter in this field for you in the Latitude/Longitude fields further down the form.)</span></label>
  <input name="location" type="text">
  <label for="notes"><span>Additional Notes (Add any additional notes and observations.)</span></label>
  <input name="notes" type="text" maxlength="255">

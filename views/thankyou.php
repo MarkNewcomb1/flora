@@ -1,21 +1,13 @@
 <!DOCTYPE HTML>
 <html>
-	<head><title>Thanks!</title></head>
+	<head><title>Thanks!</title>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='../styles.css' rel='stylesheet' type='text/css'>
+	</head>
 	<body>
+		<div class="flora">
 		<h1>Confirmation Page - Entered Successfully</h1>
-		<p>Thanks for submitting the form!</p>
-		<p>Here is your entry:</p>
-		
-		<?php
-			echo "We have entered the thank you page at last";
-/*
-			echo 'Plant Name: ' . $_POST['plant-name'] . '<br>';
-			echo 'Soil Conditions: ' . $_POST['soil-conditions'] . '<br>';
-			echo 'Weather Conditions: ' . $_POST['weather-conditions'] . '<br>';
-			echo 'Location: ' . $_POST['location'] . '<br>';
-			echo 'Your Name: ' . $_POST['person-name'] . '<br>';
-			echo 'Notes: ' . $_POST['notes'] . '<br>';
-*/
-		?>
+		<h2>Thanks for submitting the form!</h2>
+		</div>
 	</body>
 </html>
