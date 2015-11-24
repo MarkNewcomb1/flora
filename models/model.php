@@ -44,7 +44,7 @@
 
 function submitPost(){
 if ( ! empty( $_POST ) ) {
-  
+  global $mysqli;
   // Check our connection
   if ( $mysqli->connect_error ) {
     die( 'Connect Error: ' . $mysqli->connect_errno . ': ' . $mysqli->connect_error );
