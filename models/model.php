@@ -1,5 +1,7 @@
 <?php
-//Evan's code
+  // Connect to MySQL
+  $mysqli = new mysqli( 'localhost', 'root', 'root', 'flora' );
+  
 	class FormFactory {
 		
 		public function _construct ($data) {
@@ -37,14 +39,11 @@
 				submitPost();
 			}//end else
 		}
-		
 	}
+
 
 function submitPost(){
 if ( ! empty( $_POST ) ) {
-  
-  // Connect to MySQL
-  $mysqli = new mysqli( 'localhost', 'root', 'root', 'flora' );
   
   // Check our connection
   if ( $mysqli->connect_error ) {
