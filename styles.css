@@ -101,3 +101,18 @@ html{
 fieldset {
 	margin-bottom: 5%;
 }
+.csvbutton {
+	padding: 5px;
+	background-color: white;
+	font: 1em sans-serif;
+	float: right;
+	text-decoration: none;
+	color: #666;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+	
+}
+.csvbutton:hover {
+	background-color:#80A24A;
+}
