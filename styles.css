@@ -90,6 +90,7 @@ html{
     font-size:1.3em;
     color: #FFF;
     text-shadow: 1px 1px 1px #949494;
+    -webkit-appearance: none;
 }
 .flora .button:hover {
     background-color:#80A24A;
