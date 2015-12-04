@@ -23,6 +23,10 @@
 				.clear {
 					clear: both;
 				}
+				.label {
+					background-color:rgba(171, 224, 188, 0.44);
+					text-decoration: underline;
+				}
 			</style>
 					<link href='../styles.css' rel='stylesheet' type='text/css'>
 		</head>
@@ -38,17 +42,17 @@ $i=0;
 while($row = mysql_fetch_array($result)) {
 ?>
 <ul>
-<li><?=$row["ObservationID"];?></li>
-<li><?=$row["personname"];?></li>
-<li><?=$row["plantname"];?></li>
-<li><?=$row["soilconditions"];?></li>
-<li><?=$row["weatherconditions"];?></li>
-<li><?=$row["datetime"];?></li>
-<li><?=$row["location"];?></li>
-<li><?=$row["latitude"];?></li>
-<li><?=$row["longitude"];?></li>
-<li><?=$row["notes"];?></li>
-<li><?=$row["temperature"];?></li>
+<li><span class="label">ID:</span> <?=$row["ObservationID"];?></li>
+<li><span class="label">Name:</span> <?=$row["personname"];?></li>
+<li><span class="label">Plant:</span> <?=$row["plantname"];?></li>
+<li><span class="label">Soil:</span> <?=$row["soilconditions"];?></li>
+<li><span class="label">Weather:</span> <?=$row["weatherconditions"];?></li>
+<li><span class="label">Date:</span> <?=$row["datetime"];?></li>
+<li><span class="label">Location:</span> <?=$row["location"];?></li>
+<li><span class="label">Lat:</span> <?=$row["latitude"];?></li>
+<li><span class="label">Long:</span> <?=$row["longitude"];?></li>
+<li><span class="label">Notes:</span> <?=$row["notes"];?></li>
+<li><span class="label">Temp:</span> <?=$row["temperature"];?></li>
 </ul>
 <br />
 <h2 class="next">Next Record:</h2>
