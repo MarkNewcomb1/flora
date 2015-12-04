@@ -20,6 +20,9 @@
 					display:inline-block;
 					background-color:rgba(11, 152, 11, 0.9);
 				}
+				.clear {
+					clear: both;
+				}
 			</style>
 					<link href='../styles.css' rel='stylesheet' type='text/css'>
 		</head>
@@ -49,6 +52,7 @@ while($row = mysql_fetch_array($result)) {
 </ul>
 <br />
 <h2 class="next">Next Record:</h2>
+<div class="clear"></div>
 <?php
 $i++;
 }
