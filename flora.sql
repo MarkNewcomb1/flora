@@ -31,7 +31,7 @@ CREATE TABLE `observations` (
   `plantname` NVARCHAR(100) NULL,
   `soilconditions` NVARCHAR(100) DEFAULT NULL,
   `weatherconditions` NVARCHAR(50) DEFAULT NULL,
-  `datetime` DATETIME DEFAULT NULL,
+  `datetime` NVARCHAR(50) DEFAULT NULL,
   `location` NVARCHAR(200) DEFAULT NULL,
   `latitude` DECIMAL(9,6) DEFAULT NULL,
   `longitude` DECIMAL(9,6) DEFAULT NULL,
